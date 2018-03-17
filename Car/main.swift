@@ -9,7 +9,8 @@
 import Foundation
 let mySelfDrivingCar = SelfDrivingCar()
 
-mySelfDrivingCar.destination = "1 Hacker Way"
+//mySelfDrivingCar.destination = "1 Hacker Way"
+mySelfDrivingCar.setDestination(dest: "\"1 Hacker Way\"")
 mySelfDrivingCar.drive()
 
 

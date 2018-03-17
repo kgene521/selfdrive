@@ -9,8 +9,29 @@
 import Foundation
 class SelfDrivingCar : Car {
     var destination: String?
+    
+    func setDestination(dest: String) {
+        destination = dest
+    }
     override func drive() {
         super.drive()
-        print("driving towards " + destination!)
+        /* Force unwrapping (destination!)
+        if destination != nil {
+            print("driving towards " + destination!)
+        }
+        else {
+            print("No Destination specified")
+        }
+        */
+        // Optional binding: no need for force-unwrapping, not using the ! force 
+        if let newDest = destination {
+            print("towards " + newDest, separator: "", terminator: "\n")
+            
+        } else {
+            print("No Destination specified!!!!", separator: "", terminator: "\n")
+        }
+        
+        
+        
     }
 }

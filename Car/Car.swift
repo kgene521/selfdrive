@@ -9,6 +9,6 @@
 import Foundation
 class Car {
     func drive() {
-        print ("car is moving")
+        print ("car is moving ", separator: "", terminator: "")
     }
 }
